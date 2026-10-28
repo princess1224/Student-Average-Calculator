@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-    // Store 5 student names and their 3 marks
+   
     char names[5][20];
     int marks[5][3];
     int total[5];
@@ -14,7 +14,7 @@ int main() {
     int i, j;
     int topStudent = 0;
 
-    // Read student names and marks
+   
     for (i = 0; i < 5; i++) {
         cout << "\nEnter name of student " << i + 1 << ": ";
         cin.getline(names[i], 20);
@@ -28,16 +28,16 @@ int main() {
             total[i] = total[i] + marks[i][j];
         }
 
-        // Calculate average
+       
         average[i] = total[i] / 3.0;
 
-        // Clear the input buffer before reading the next name
+        
         if (i < 4) {
             cin.ignore(1000, '\n');
         }
     }
 
-    // Find the top student using total marks
+   
     for (i = 1; i < 5; i++) {
         if (total[i] > total[topStudent]) {
             topStudent = i;
@@ -46,7 +46,7 @@ int main() {
 
     // Print the mark sheet
     cout << "\n\n";
-    cout << "================ STUDENT MARK SHEET ================\n";
+    cout << " STUDENT MARK SHEET \n";
 
     cout << left
          << setw(20) << "Name"
@@ -71,7 +71,7 @@ int main() {
 
     cout << "-----------------------------------------------------\n";
 
-    // Display the top student
+    
     cout << "\nTop student: " << names[topStudent] << endl;
     cout << "Total marks: " << total[topStudent] << endl;
     cout << "Average: " << fixed << setprecision(1)
