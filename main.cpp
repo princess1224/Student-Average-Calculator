@@ -46,7 +46,7 @@ int main() {
 
     // Print the mark sheet
     cout << "\n\n";
-    cout << " STUDENT MARK SHEET \n";
+    cout << "================ STUDENT MARK SHEET ================\n";
 
     cout << left
          << setw(20) << "Name"
